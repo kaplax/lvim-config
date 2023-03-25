@@ -7,7 +7,7 @@ a global executable or a path to
 an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
-local telescope = require("./plugins/telescope")
+local telescope = require("plugins.telescope")
 
 -- general
 lvim.log.level = "warn"
@@ -65,10 +65,10 @@ lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
 
 
-local neoscroll = require("./plugins/neoscroll")
-local lastplace = require("./plugins/lastplace")
-local todo_comments = require("./plugins/todo-comments")
-local nvim_colorizer = require("./plugins/nvim-colorizer")
+local neoscroll = require("plugins.neoscroll")
+local lastplace = require("plugins.lastplace")
+local todo_comments = require("plugins.todo-comments")
+local nvim_colorizer = require("plugins.nvim-colorizer")
 
 -- Additional Plugins
 lvim.plugins = {
