@@ -69,13 +69,19 @@ local neoscroll = require("plugins.neoscroll")
 local lastplace = require("plugins.lastplace")
 local todo_comments = require("plugins.todo-comments")
 local nvim_colorizer = require("plugins.nvim-colorizer")
+local markdown_preview = require("plugins.markdown-preview")
+local hop = require("plugins.hop")
 
 -- Additional Plugins
 lvim.plugins = {
+  hop.setup(),
   neoscroll.setup(),
   lastplace.setup(),
   todo_comments.setup(),
   nvim_colorizer.setup(),
+  markdown_preview.setup(),
   { "tpope/vim-unimpaired" },
   { "navarasu/onedark.nvim" },
+  { "tpope/vim-surround" },
+  { "APZelos/blamer.nvim" },
 }
