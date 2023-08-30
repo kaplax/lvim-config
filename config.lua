@@ -35,10 +35,10 @@ lvim.keys.insert_mode["jj"] = false
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
 
-local _, actions = pcall(require, "telescope.actions")
+-- local _, actions = pcall(require, "telescope.actions")
 
-lvim.builtin.telescope.pickers = telescope.get_pickers(actions)
-lvim.builtin.telescope.defaults.pickers = telescope.get_pickers(actions)
+-- lvim.builtin.telescope.pickers = telescope.get_pickers(actions)
+-- lvim.builtin.telescope.defaults.pickers = telescope.get_pickers(actions)
 
 
 -- TODO: User Config for predefined plugins
@@ -48,6 +48,7 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.telescope.theme = "center"
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -71,6 +72,7 @@ local todo_comments = require("plugins.todo-comments")
 local nvim_colorizer = require("plugins.nvim-colorizer")
 local markdown_preview = require("plugins.markdown-preview")
 local hop = require("plugins.hop")
+local copilot = require("plugins.copilot")
 
 -- Additional Plugins
 lvim.plugins = {
@@ -80,6 +82,7 @@ lvim.plugins = {
   todo_comments.setup(),
   nvim_colorizer.setup(),
   markdown_preview.setup(),
+  copilot.setup(),
   { "tpope/vim-unimpaired" },
   { "navarasu/onedark.nvim" },
   { "tpope/vim-surround" },
