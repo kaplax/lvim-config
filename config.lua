@@ -7,8 +7,6 @@ a global executable or a path to
 an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
-local telescope = require("plugins.telescope")
-
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
@@ -72,7 +70,6 @@ local todo_comments = require("plugins.todo-comments")
 local nvim_colorizer = require("plugins.nvim-colorizer")
 local markdown_preview = require("plugins.markdown-preview")
 local hop = require("plugins.hop")
-local copilot = require("plugins.copilot")
 
 -- Additional Plugins
 lvim.plugins = {
@@ -82,7 +79,6 @@ lvim.plugins = {
   todo_comments.setup(),
   nvim_colorizer.setup(),
   markdown_preview.setup(),
-  copilot.setup(),
   { "tpope/vim-unimpaired" },
   { "navarasu/onedark.nvim" },
   { "tpope/vim-surround" },
