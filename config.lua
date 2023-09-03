@@ -15,7 +15,8 @@ lvim.builtin.which_key.setup.plugins.marks = true
 lvim.builtin.which_key.setup.plugins.registers = true
 lvim.builtin.which_key.setup.plugins.presets.nav = true
 -- lvim.builtin.terminal.open_mapping = [[<c-t>]]
-
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.opt.relativenumber = true
 vim.opt.timeoutlen = 250
 -- to disable icons and use a minimalist setup, uncomment the following
@@ -70,6 +71,8 @@ local todo_comments = require("plugins.todo-comments")
 local nvim_colorizer = require("plugins.nvim-colorizer")
 local markdown_preview = require("plugins.markdown-preview")
 local hop = require("plugins.hop")
+local copilot = require("plugins.copilot")
+local copilot_cmp = require("plugins.copilot-cmp")
 
 -- Additional Plugins
 lvim.plugins = {
@@ -79,6 +82,8 @@ lvim.plugins = {
   todo_comments.setup(),
   nvim_colorizer.setup(),
   markdown_preview.setup(),
+  copilot.setup(),
+  copilot_cmp.setup(),
   { "tpope/vim-unimpaired" },
   { "navarasu/onedark.nvim" },
   { "tpope/vim-surround" },
